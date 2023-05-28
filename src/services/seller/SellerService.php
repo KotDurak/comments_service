@@ -27,12 +27,6 @@ class SellerService
 
     public function getOne(int $id): Seller
     {
-        $model = Seller::findOne($id);
-
-        if (empty($model)) {
-            throw new NotFoundHttpException();
-        }
-
-        return $model;
+        return Seller::findOrError($id, "Продавец $id не найден");
     }
 }

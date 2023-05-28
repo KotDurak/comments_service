@@ -5,6 +5,8 @@ namespace app\services\comment;
 
 
 use app\models\Comment;
+use app\models\forms\CommentForm;
+use yii\web\NotFoundHttpException;
 
 
 class CommentService
@@ -17,5 +19,16 @@ class CommentService
         $comment->status = Comment::STATUS_NEW;
 
         return $comment->save();
+    }
+
+    public function getOne(int $id): Comment
+    {
+        $model = CommentForm::findOne($id);
+
+        if (empty($model)) {
+            throw new NotFoundHttpException();
+        }
+
+        return $model;
     }
 }

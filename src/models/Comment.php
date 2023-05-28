@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\models\subjects\Subject;
 use Yii;
 
 /**
@@ -23,6 +24,12 @@ class Comment extends \yii\db\ActiveRecord
     const STATUS_APPROVED = 2;
     const STATUS_REJECTED = 3;
 
+    const STATUSES = [
+        self::STATUS_NEW => 'New',
+        self::STATUS_APPROVED   => 'Approved',
+        self::STATUS_REJECTED   => 'Rejected',
+    ];
+
     /**
      * {@inheritdoc}
      */
@@ -37,7 +44,7 @@ class Comment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['subject_id', 'status', 'create_time'], 'integer'],
+            [['subject_id', 'status'], 'integer'],
             [['subject', 'comment'], 'required'],
             [['comment'], 'string'],
             [['subject', 'ip', 'user_agent', 'username'], 'string', 'max' => 255],
@@ -61,4 +68,5 @@ class Comment extends \yii\db\ActiveRecord
             'comment' => 'Comment',
         ];
     }
+
 }

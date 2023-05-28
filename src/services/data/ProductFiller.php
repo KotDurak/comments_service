@@ -12,7 +12,7 @@ class ProductFiller implements Filler
     public function fill()
     {
         app()->db->createCommand()
-        ->batchInsert(Product::tableName(), ['name', 'subject', 'description'], $this->getRows())
+        ->batchInsert(Product::tableName(), ['name', 'description', 'subject'], $this->getRows())
         ->execute();
     }
 
@@ -23,25 +23,27 @@ class ProductFiller implements Filler
 
     private function getRows()
     {
-        $rows = [
+        return [
             [
                 'name'          => 'Ваз 2114',
                 'description'   => 'Хорошая такая тачка',
+                'subject'       => Product::getSubjectName(),
             ],
             [
                 'name'  => 'Веста',
                 'description'   => 'Ниче такая',
+                'subject'       => Product::getSubjectName(),
             ],
             [
                 'name'  => 'Reno Logan',
                 'description'   => 'На дачу ездить',
+                'subject'       => Product::getSubjectName(),
             ],
             [
                 'name'  => 'Обои для дачи',
                 'description'   => 'Качественные обои',
+                'subject'       => Product::getSubjectName(),
             ],
         ];
-
-        return array_map(fn($r) => [...$r, 'subject' => Product::getSubjectName()], $rows);
     }
 }

@@ -94,6 +94,15 @@
       <path value="$PROJECT_DIR$/src/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/src/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/src/vendor/kartik-v/yii2-krajee-base" />
+      <path value="$PROJECT_DIR$/src/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <path value="$PROJECT_DIR$/src/vendor/yiisoft/yii2-jui" />
+      <path value="$PROJECT_DIR$/src/vendor/kartik-v/yii2-icons" />
+      <path value="$PROJECT_DIR$/src/vendor/bower-asset/jquery-ui" />
+      <path value="$PROJECT_DIR$/src/vendor/components/flag-icon-css" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

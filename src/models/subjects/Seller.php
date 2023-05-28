@@ -19,4 +19,14 @@ class Seller extends Subject
             ['name', 'string', 'min' => 3],
         ]);
     }
+
+    public function subjectName(): string
+    {
+        return $this->name;
+    }
+
+    public function subjectInfo(): string
+    {
+        return '';
+    }
 }

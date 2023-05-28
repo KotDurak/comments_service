@@ -96,6 +96,15 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/yiisoft/yii2-jui" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/kartik-v/yii2-icons" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/bower-asset/jquery-ui" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/components/flag-icon-css" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/guzzlehttp/guzzle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

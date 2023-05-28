@@ -13,4 +13,14 @@ class Post extends Subject
             [['title', 'content'], 'sting']
         ]);
     }
+
+    public function subjectName(): string
+    {
+        return $this->title;
+    }
+
+    public function subjectInfo(): string
+    {
+        return '';
+    }
 }

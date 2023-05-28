@@ -9,21 +9,25 @@ use yii\data\ActiveDataProvider;
 
 class CommentSearch extends Comment
 {
-    public $first_time;
-    public $last_time;
+    public $date_from;
+    public $date_to;
     public $subject;
+    public $username;
+    public $subject_id;
+
 
     public function rules()
     {
         return [
-            [['first_time', 'last_time'], 'safe'],
-            [['subject'], 'string']
+            [['date_from', 'date_to'], 'safe'],
+            [['subject', 'username'], 'string'],
+            ['subject_id', 'integer'],
         ];
     }
 
-    public function search(array $params = []): ActiveDataProvider
+    public function search(array $params = [], $formName = null): ActiveDataProvider
     {
-        $this->load($params);
+        $this->load($params, $formName);
 
         $query = Comment::find();
 
@@ -33,13 +37,21 @@ class CommentSearch extends Comment
 
         $query->andFilterWhere(['subject' => $this->subject]);
 
-        if (!empty($this->first_time)) {
-            $query->andWhere(['>=', 'create_time', $this->first_time]);
+        if (!empty($this->date_from)) {
+            $query->andWhere(['>=', 'create_time', strtotime($this->date_from)]);
         }
 
-        if (!empty($this->last_time)) {
-            $query->andWhere(['<=', 'create_time', $this->last_time]);
+        if (!empty($this->date_to)) {
+            $query->andWhere(['<=', 'create_time', strtotime($this->date_to)]);
         }
+
+        //dd($query->createCommand()->getRawSql());
+
+        $query->andFilterWhere(['like', 'username', $this->username])
+            ->andFilterWhere([
+                'subject_id' => $this->subject_id,
+                'subject'    => $this->subject,
+            ]);
 
 
         return $dataProvider;

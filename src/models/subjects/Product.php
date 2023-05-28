@@ -41,4 +41,14 @@ class Product extends \app\models\subjects\Subject
             'description' => 'Description',
         ];
     }
+
+    public function subjectName(): string
+    {
+        return $this->name;
+    }
+
+    public function subjectInfo(): string
+    {
+        return $this->description;
+    }
 }
