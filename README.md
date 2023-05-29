@@ -10,6 +10,8 @@ sh app bash режим командной строки внутри окруже
 sh app composer запуск composer
 
 Скопировать содержимое файлв .env.example в .env
+cd src/
+cp .env.example .env
 
 Для заполнения бд тестовыми данными 
 php yii init 

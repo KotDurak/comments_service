@@ -8,30 +8,36 @@ then
   echo "sh app down завершить работу окружения"
   echo "sh app bash режим командной строки внутри окружения"
   echo "sh app composer запуск composer"
+  echo "sh app build для сборки докера"
 exit
 fi
 
 if [ $1 = "yii" ]
 then
-docker-compose -f  ./docker/yii2-docker-basic/docker-compose.yml exec php  php "$@"
+docker-compose -f  ./docker/docker-compose.yml exec php  php "$@"
 fi
 
 if [ $1 = "composer" ]
 then
-docker-compose -f  ./docker/yii2-docker-basic/docker-compose.yml exec php  "$@"
+docker-compose -f  ./docker/docker-compose.yml exec php  "$@"
 fi
 
 if [ $1 = 'down' ]
 then
-docker-compose -f  ./docker/yii2-docker-basic/docker-compose.yml down
+docker-compose -f  ./docker/docker-compose.yml down
 fi
 
 if [ $1 = 'up' ]
 then
-  docker-compose -f  ./docker/yii2-docker-basic/docker-compose.yml up $2
+  docker-compose -f  ./docker/docker-compose.yml up $2
+fi
+
+if [ $1 = 'build' ]
+then
+  docker-compose -f  ./docker/docker-compose.yml build
 fi
 
 if [ $1 = 'bash' ]
 then
-  docker-compose -f  ./docker/yii2-docker-basic/docker-compose.yml exec php bash
+  docker-compose -f  ./docker/docker-compose.yml exec php bash
 fi
