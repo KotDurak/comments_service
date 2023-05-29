@@ -107,19 +107,6 @@
       <path value="$PROJECT_DIR$/src/vendor/paquettg/string-encode" />
     </include_path>
   </component>
-  <component name="PhpInterpreters">
-    <interpreters>
-      <interpreter id="dd8d94da-43a8-4b82-b5ca-dfd620426c2a" name="php" home="docker-compose://DATA" debugger_id="php.debugger.XDebug">
-        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker2" DOCKER_COMPOSE_SERVICE_NAME="php" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
-          <type_data command="RUN" />
-          <dockerComposeConfigurationPaths>
-            <item value="$PROJECT_DIR$/docker/yii2-docker-basic/docker-compose.yml" />
-          </dockerComposeConfigurationPaths>
-          <envs />
-        </remote_data>
-      </interpreter>
-    </interpreters>
-  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpUnit">
     <phpunit_settings>
