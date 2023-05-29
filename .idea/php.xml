@@ -103,6 +103,8 @@
       <path value="$PROJECT_DIR$/src/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/src/vendor/paquettg/php-html-parser" />
+      <path value="$PROJECT_DIR$/src/vendor/paquettg/string-encode" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

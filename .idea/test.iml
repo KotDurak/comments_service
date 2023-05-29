@@ -105,6 +105,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/paquettg/php-html-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/paquettg/string-encode" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

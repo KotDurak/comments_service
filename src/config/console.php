@@ -28,6 +28,11 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
+    'container' => [
+        'definitions'   => [
+            \app\services\parsers\ICommentParser::class => \app\services\parsers\YandexParser::class,
+        ]
+    ]
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.

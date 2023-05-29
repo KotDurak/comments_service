@@ -21,7 +21,8 @@
         "yiithings/yii2-dotenv": "*",
         "kartik-v/yii2-widget-datetimepicker": "dev-master",
         "kartik-v/yii2-icons": "^1.4",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "paquettg/php-html-parser": "^2.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

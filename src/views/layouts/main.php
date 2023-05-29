@@ -43,6 +43,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ['label' => 'Товары', 'url' => ['/product/index']],
           //  ['label' => 'Посты', 'url' => ['/post/index']],
             ['label'    => 'Комментарии', 'url' => ['/comment']],
+            ['label'    => 'api', 'url' => ['/api']],
             ['label' => 'Yandex Marker', 'url' => ['/yandex']],
         ]
     ]);
